@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+#language-button img {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#language-button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+#language-button:hover {
+    background-color: #555;
+}
+
+
+#translate-button:hover {
+    background-color: #555;
+}
+
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Prend la hauteur complète de l'écran */
+    overflow: hidden; /* Empêche le débordement de l'image */
+}
+
+.image-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que l'image couvre tout l'écran sans déformation */
+    transform: translate(-50%, -50%);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.photo-item h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a img {
+    margin-top: 10px;
+    transition: filter 0.3s ease, filter 0.3s ease;
+}
+
+footer a img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
