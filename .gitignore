@@ -1,0 +1,31 @@
+### Fichier `.gitignore` générique pour les projets HTML, CSS et JavaScript
+
+# Ce fichier de configuration est utilisé dans un projet versionné avec Git pour spécifier
+# quels fichiers ou dossiers ne doivent pas être suivis ou inclus dans le contrôle de version.
+# Il est placé à la racine du dépôt Git ou dans des sous-dossiers spécifiques, et liste des motifs
+# correspondant aux noms de fichiers ou répertoires à ignorer.
+#
+# Aide en ligne : https://git-scm.com/docs/gitignore/fr
+
+### Ignorer les dossiers de configuration spécifiques aux IDE
+
+# Dossier JetBrains et Visual Studio Code
+.idea/
+.vscode/
+
+
+### Ignorer les fichiers générés par l'OS
+
+# Fichiers et dossiers temporaires de macOS
+.DS_Store
+
+# Fichiers de cache de Windows
+Thumbs.db
+ehthumbs.db
+
+
+### Ignorer les fichiers de log et de sauvegarde
+
+*.log
+*.tmp
+*.bak
