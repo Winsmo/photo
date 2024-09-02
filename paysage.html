@@ -3,113 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paysage - Winsmoo Photography Galerie Photo Winsmo</title>
+    <title data-i18n="page.title.landscapes">Paysages - Winsmoo Photography</title>
     <link rel="stylesheet" href="site_photo.css">
+    <script src="js/locales/i18n.js"></script>
+    <script src="js/locales/fr.js"></script>
+    <script src="js/locales/en.js"></script>
+    <script src="js/locales/de.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Winsmoo Photography</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="galerie.html">Galeries</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <li><a href="#" id="language-button">
-            <img src="anglais.jpeg" alt="Change Language" width="30" height="20">
-        </a></li>
-    </header>
+<header>
+    <h1 data-i18n="header.title">Winsmoo Photography</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="galerie.html" data-i18n="nav.gallery">Galeries</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+    <label for="language-select" data-i18n="header.language">Langue</label>
+    <select id="language-select">
+        <option value="fr">🇫🇷 Français</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="de">🇩🇪 Deutsch</option>
+    </select>
+</header>
 
-    <main>
-        <section>
-            <h2>Paysages</h2>
-            <div class="gallery">
-                <div class="photo-item">
-                    <a href="paysage.html">
-                        <img src="p1.jpg" >
-                    </a>
-                </div>
-                <div class="photo-item">
-                    <a href="paysage.html">
-                        <img src="p3.jpg" >
-                    </a>
-                </div>
-                <div class="photo-item">
-                    <img src="p6.jpg">
-                </div>
-                <div class="photo-item">
-                    <img src="p2.jpg">
-                </div>
+<main>
+    <section>
+        <h2 data-i18n="landscapes.title">Paysages</h2>
+        <div class="gallery">
+            <div class="photo-item">
+                <img src="p1.jpg">
             </div>
-        </section>
-    </main>
+            <div class="photo-item">
+                <img src="p3.jpg">
+            </div>
+            <div class="photo-item">
+                <img src="p6.jpg">
+            </div>
+            <div class="photo-item">
+                <img src="p2.jpg">
+            </div>
+        </div>
+    </section>
+</main>
 
-    <footer>
-        <p>&copy; 2024 Winsmoo Photography Tous droits réservés.</p>
-        <a href="https://www.instagram.com/winsmoo" target="_blank">
-            <img src="insta.png" width="50" height="50" alt="Instagram Winsmoo"/>
-        </a>
-    </footer>
+<footer>
+    <p data-i18n="footer.copyright">&copy; 2024 Winsmoo Photography Tous droits réservés.</p>
+    <a href="https://www.instagram.com/winsmoo" target="_blank">
+        <img src="insta.png" width="50" height="50" alt="Instagram Winsmoo"/>
+    </a>
+</footer>
 
-    <script>
-        const translations = {
-            "Accueil": "Home",
-            "Galerie": "Gallery",
-            "Contact": "Contact",
-            "Mes Photos": "My Photos",
-            "Paysage": "Landscape",
-            "Portrait": "Portrait",
-            "Qui suis-je ?": "Who am I?",
-            "Découvrez mon univers à travers mes photos.": "Discover my universe through my photos.",
-            "Explorez mon travail": "Explore my work",
-            "Introduction": "Introduction",
-            "Bienvenue sur mon site de photographie. Découvrez ma galerie et n'hésitez pas à me contacter pour plus d'informations ou pour une demande spécifique.":
-            "Welcome to my photography website. Discover my gallery and feel free to contact me for more information or specific requests.",
-            "Formulaire de Contact": "Contact Form",
-            "Nom :": "Name:",
-            "Email :": "Email:",
-            "Message :": "Message:",
-            "Envoyer": "Send"
-        };
-    
-        const translationsFr = {
-            "Home": "Accueil",
-            "Gallery": "Galerie",
-            "Contact": "Contact",
-            "My Photos": "Mes Photos",
-            "Landscape": "Paysage",
-            "Portrait": "Portrait",
-            "Who am I?": "Qui suis-je ?",
-            "Discover my universe through my photos.": "Découvrez mon univers à travers mes photos.",
-            "Explore my work": "Explorez mon travail",
-            "Introduction": "Introduction",
-            "Welcome to my photography website. Discover my gallery and feel free to contact me for more information or specific requests.":
-            "Bienvenue sur mon site de photographie. Découvrez ma galerie et n'hésitez pas à me contacter pour plus d'informations ou pour une demande spécifique.",
-            "Contact Form": "Formulaire de Contact",
-            "Name:": "Nom :",
-            "Email:": "Email :",
-            "Message:": "Message :",
-            "Send": "Envoyer"
-        };
-    
-        let isEnglish = false;
-    
-        document.getElementById('language-button').addEventListener('click', function(e) {
-            e.preventDefault();
-            const elements = document.querySelectorAll('h1, h2, h3, p, label, a, button');
-            elements.forEach(function(element) {
-                if (isEnglish && translationsFr[element.innerText]) {
-                    element.innerText = translationsFr[element.innerText];
-                } else if (!isEnglish && translations[element.innerText]) {
-                    element.innerText = translations[element.innerText];
-                }
-            });
-    
-            isEnglish = !isEnglish;
-            this.querySelector('img').src = isEnglish ? 'france.jpg' : 'anglais.jpeg';
-        });
-    </script>
-    
 </body>
 </html>
