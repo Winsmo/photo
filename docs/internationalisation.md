@@ -5,8 +5,8 @@
 Pour rendre un site web accessible à un public international, il est essentiel de permettre aux utilisateurs
 de choisir la langue dans laquelle ils souhaitent naviguer.
 La méthode la plus courante consiste à utiliser une liste déroulante pour sélectionner la langue.
-Lorsque l'utilisateur change de langue, le contenu de la page est immédiatement mis à jour avec les textes traduits.
-Pour garantir une expérience fluide, la langue choisie doit être conservée d'une page à l'autre.
+Lorsque l’utilisateur change de langue, le contenu de la page est immédiatement mis à jour avec les textes traduits.
+Pour garantir une expérience fluide, la langue choisie doit être conservée d’une page à l’autre.
 
 ## Mise en œuvre
 
@@ -27,7 +27,7 @@ Voici les étapes clefs :
 
 Ces étapes permettent de mettre en place un mécanisme de traduction simple.
 
-Exemple d'objet `I18n` :
+Exemple d’objet `I18n` :
 
 ```javascript
 window.I18n = {
@@ -63,12 +63,12 @@ window.I18n = {
 };
 ```
 
-> NOTE : l'attribut `data-i18n` est un attribut HTML personnalisé qui permet d'identifier les éléments à traduire.
+> NOTE : l’attribut `data-i18n` est un attribut HTML personnalisé qui permet d’identifier les éléments à traduire.
 
 ### Balisage HTML
 
-Pour traduire le contenu HTML, il suffit d'ajouter un attribut `data-i18n` aux balises qui doivent être traduites.
-Cet attribut contient l'identifiant du texte à traduire.
+Pour traduire le contenu HTML, il suffit d’ajouter un attribut `data-i18n` aux balises qui doivent être traduites.
+Cet attribut contient l’identifiant du texte à traduire.
 
 Exemple :
 
@@ -77,11 +77,11 @@ Exemple :
 <p data-i18n="page.text.welcome">Welcome to our website!</p>
 ```
 
-Cette approche permet d'identifier facilement les éléments à traduire et de les mettre à jour dynamiquement.
+Cette approche permet d’identifier facilement les éléments à traduire et de les mettre à jour dynamiquement.
 
 ### Sélection de la langue
 
-Pour permettre à l'utilisateur de choisir la langue, il est possible d'utiliser une liste déroulante.
+Pour permettre à l’utilisateur de choisir la langue, il est possible d’utiliser une liste déroulante.
 
 Exemple de liste déroulante :
 
@@ -94,16 +94,16 @@ Exemple de liste déroulante :
 </select>
 ```
 
-> NOTE : L'utilisation d'emojis pour les drapeaux permet d’éviter d'utiliser des images.
-> Les emojis sont plus légers et s'adaptent automatiquement à la taille du texte.
+> NOTE : L’utilisation d’emojis pour les drapeaux permet d’éviter d’utiliser des images.
+> Les emojis sont plus légers et s’adaptent automatiquement à la taille du texte.
 
-Un gestionnaire d'événements "change" doit être ajouté au `select` pour traduire la page lorsque la langue est modifiée.
+Un gestionnaire d’événements "change" doit être ajouté au `select` pour traduire la page lorsque la langue est modifiée.
 
 ### Persistance de la langue
 
-Dans le cas d'un site web dynamique, la langue choisie par l'utilisateur devrait être stockée dans une base de données.
+Dans le cas d’un site web dynamique, la langue choisie par l’utilisateur devrait être stockée dans une base de données.
 Mais pour un site web statique, il est possible de stocker la langue dans le `localStorage` du navigateur,
-ce qui permet de conserver la langue choisie d'une page à l'autre.
+ce qui permet de conserver la langue choisie d’une page à l’autre.
 
 Exemple de gestion de la langue :
 
@@ -120,7 +120,7 @@ document.getElementById("language-select").addEventListener("change", function (
 ```
 
 Les fonctions `localStorage.getItem` et `localStorage.setItem` permettent de stocker et récupérer la langue choisie
-par l'utilisateur dans le navigateur.
+par l’utilisateur dans le navigateur.
 
 ### Chargement des traductions
 
@@ -146,12 +146,12 @@ Exemple de chargement des traductions :
 </html>
 ```
 
-Tous les fichiers HTML doivent inclure le fichier `i18n.js` qui contient l'objet `I18n` et les traductions par langue.
+Tous les fichiers HTML doivent inclure le fichier `i18n.js` qui contient l’objet `I18n` et les traductions par langue.
 
 ### Traduction du document au chargement
 
-Pour traduire le document au chargement de la page, il suffit d'appeler la fonction `translateDocument`.
-Cela se fait en ajoutant un gestionnaire d'événements "DOMContentLoaded" sur l'objet `document`.
+Pour traduire le document au chargement de la page, il suffit d’appeler la fonction `translateDocument`.
+Cela se fait en ajoutant un gestionnaire d’événements "DOMContentLoaded" sur l’objet `document`.
 
 Exemple de traduction du document :
 
@@ -166,13 +166,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 ```
 
-La traduction doit se faire lorsque la page est entièrement chargée pour éviter les problèmes d'affichage.
+La traduction doit se faire lorsque la page est entièrement chargée pour éviter les problèmes d’affichage.
 
 ## Conclusion
 
-La mise en place d'un système de traduction pour un site web statique est relativement simple.
+La mise en place d’un système de traduction pour un site web statique est relativement simple.
 Il suffit de suivre les étapes décrites ci-dessus pour permettre aux utilisateurs de naviguer dans leur langue préférée.
-La persistance de la langue dans le `localStorage` garantit une expérience utilisateur cohérente d'une page à l'autre.
+La persistance de la langue dans le `localStorage` garantit une expérience utilisateur cohérente d’une page à l’autre.
 
-Pour ajouter une nouvelle langue, par exemple l'espagnol, il suffit de créer un fichier `es.js` contenant
-les traductions et d'ajouter une option dans la liste déroulante.
+Pour ajouter une nouvelle langue, par exemple l’espagnol, il suffit de créer un fichier `es.js` contenant
+les traductions et de l’importer dans le fichier HTML, et d’ajouter une option dans la liste déroulante.
