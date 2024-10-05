@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +7,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header Styles */
 header {
     background: #333;
     color: #fff;
@@ -38,58 +40,36 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-hr {
-    margin: 20px 0;
-}
-
+/* Main Content Styles */
 main {
     padding: 20px;
 }
 
-#language-button img {
-    vertical-align: middle;
-    cursor: pointer;
-}
-
-#language-button {
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: #333;
-    transition: background-color 0.3s ease;
-}
-
-#language-button:hover {
-    background-color: #555;
-}
-
-
-#translate-button:hover {
-    background-color: #555;
-}
-
-
-
 .image-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Prend la hauteur complète de l'écran */
-    overflow: hidden; /* Empêche le débordement de l'image */
+    height: 100vh;
+    overflow: hidden;
 }
 
 .image-container img {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Assure que l'image couvre tout l'écran sans déformation */
+    object-fit: contain; /* Utilise "cover" si tu veux que l'image remplisse tout */
+}
+
+
+.text-overlay {
+    position: absolute;
+    top: 60%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
 }
 
 .gallery {
@@ -116,12 +96,12 @@ main {
     margin-top: 10px;
 }
 
+/* Footer Styles */
 footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: relative;
 }
 
 footer p {
@@ -135,7 +115,7 @@ footer a {
 
 footer a img {
     margin-top: 10px;
-    transition: filter 0.3s ease, filter 0.3s ease;
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 footer a img:hover {
@@ -143,6 +123,7 @@ footer a img:hover {
     filter: brightness(1.2);
 }
 
+/* Button Styles */
 button {
     background-color: #333;
     color: #fff;
@@ -154,5 +135,23 @@ button {
 }
 
 button:hover {
+    background-color: #555;
+}
+
+/* Language Button Styles */
+#language-button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+#language-button:hover {
     background-color: #555;
 }
