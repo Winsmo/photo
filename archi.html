@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerie - Enzo Laporte Photography</title>
+    <title>Architecture</title>
     <link rel="stylesheet" href="site_photo.css">
 </head>
 <body>
@@ -23,72 +23,77 @@
 
     <main>
         <section>
-            <h2>Mes Galeries:</h2>
+            <h2>Architecture</h2>
             <div class="gallery">
                 <div class="photo-item">
-                    <a href="paysage.html">
-                        <img src="p1.jpg" alt="Paysage">
-                    </a>
-                    <h3>Paysage</h3>
+                    <img src="suede_archi.jpg" >
                 </div>
                 <div class="photo-item">
-                    <a href="shooting.html">
-                    <img src="p10.jpg" alt="Shootings">
-                </a>
-                    <h3>Shooting</h3>
+                    <img src="p4.jpg" >
                 </div>
                 <div class="photo-item">
-                    <a href="archi.html">
-                    <img src="p4.jpg" alt="Architecture">
-                </a>
-                    <h3>Architecture</h3>
+                    <img src="cathedrale2.jpg" >
                 </div>
                 <div class="photo-item">
-                    <a href="astro.html">
-                        <img src="p5.jpg" alt="Astronomie">
-                    </a>
-                    <h3>Astronomie</h3>
+                    <img src="cathedrale.jpg" >
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Enzo Laporte Photographe Tous droits réservés.</p>
+        <p>&copy; 2024 Winsmoo Photography Tous droits réservés.</p>
         <a href="https://www.instagram.com/winsmoo" target="_blank">
-            <img src="insta.png" width="50" height="50" alt="Instagram Enzo"/>
+            <img src="insta.png" width="50" height="50" alt="Instagram Winsmoo"/>
         </a>
     </footer>
 
     <script>
-        // Same language switch functionality as in index.html
         const translations = {
             "Accueil": "Home",
-            "Galeries": "Gallery",
+            "Galerie": "Gallery",
             "Contact": "Contact",
-            "Mes Galeries:": "My Galleries:",
+            "Mes Photos": "My Photos",
             "Paysage": "Landscape",
             "Portrait": "Portrait",
-            "Architecture": "Architecture",
-            "Astronomie": "Astronomy"
+            "Qui suis-je ?": "Who am I?",
+            "Découvrez mon univers à travers mes photos.": "Discover my universe through my photos.",
+            "Explorez mon travail": "Explore my work",
+            "Introduction": "Introduction",
+            "Bienvenue sur mon site de photographie. Découvrez ma galerie et n'hésitez pas à me contacter pour plus d'informations ou pour une demande spécifique.":
+            "Welcome to my photography website. Discover my gallery and feel free to contact me for more information or specific requests.",
+            "Formulaire de Contact": "Contact Form",
+            "Nom :": "Name:",
+            "Email :": "Email:",
+            "Message :": "Message:",
+            "Envoyer": "Send"
         };
-
+    
         const translationsFr = {
             "Home": "Accueil",
-            "Gallery": "Galeries",
+            "Gallery": "Galerie",
             "Contact": "Contact",
-            "My Galleries:": "Mes Galeries:",
+            "My Photos": "Mes Photos",
             "Landscape": "Paysage",
             "Portrait": "Portrait",
-            "Architecture": "Architecture",
-            "Astronomy": "Astronomie"
+            "Who am I?": "Qui suis-je ?",
+            "Discover my universe through my photos.": "Découvrez mon univers à travers mes photos.",
+            "Explore my work": "Explorez mon travail",
+            "Introduction": "Introduction",
+            "Welcome to my photography website. Discover my gallery and feel free to contact me for more information or specific requests.":
+            "Bienvenue sur mon site de photographie. Découvrez ma galerie et n'hésitez pas à me contacter pour plus d'informations ou pour une demande spécifique.",
+            "Contact Form": "Formulaire de Contact",
+            "Name:": "Nom :",
+            "Email:": "Email :",
+            "Message:": "Message :",
+            "Send": "Envoyer"
         };
-
+    
         let isEnglish = false;
-
+    
         document.getElementById('language-button').addEventListener('click', function(e) {
             e.preventDefault();
-            const elements = document.querySelectorAll('h1, h2, h3, a');
+            const elements = document.querySelectorAll('h1, h2, h3, p, label, a, button');
             elements.forEach(function(element) {
                 if (isEnglish && translationsFr[element.innerText]) {
                     element.innerText = translationsFr[element.innerText];
@@ -96,11 +101,11 @@
                     element.innerText = translations[element.innerText];
                 }
             });
-
+    
             isEnglish = !isEnglish;
             this.querySelector('img').src = isEnglish ? 'france.jpg' : 'anglais.jpeg';
         });
     </script>
+    
 </body>
 </html>
-
